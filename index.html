@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Envie seu arquivo CSS para o site.">
+  	<meta name="keywords" content="HTML,CSS">
+  	<meta name="author" content="Guilherme Cruz">
+
+    <title>Curso de HTML5 e CSS</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body id="topo">
+	<div class="container">
+		<a href="#topo" class="botao-flutuante botao-menu">MENU</a>
+		<a href="#topo" class="botao-flutuante botao-voltar-topo">Voltar para Topo</a>
+		<nav>
+			<ul>
+				<li><a href="#html" >HTML</a></li>
+				<li><a href="#semantica" >Semântica</a></li>
+				<li><a href="#html5_trouxe_novo" >O que o HTML5 trouxe de novo?</a></li>
+				<li><a href="#css" >CSS</a></li>
+				<li><a href="#regras_css" >Declarando as regras do CSS</a></li>
+				<li><a href="#especificidade" >Especificidade</a></li>
+				<li><a href="#box_model" >Box model</a></li>
+				<li><a href="#display" >Display</a></li>
+				<li><a href="#position" >Position</a></li>
+				<li><a href="#clearfix" >Clear</a></li>
+				<li><a href="#overflow" >Overflow</a></li>
+				<li><a href="#media_queries" >Media Queries</a></li>
+			</ul>
+		</nav>
+		<section class="conteudo-principal">
+			<h1>
+		 		HTML5 e CSS
+		 	</h1>
+
+		 	<h2 id="html">
+		 		HTML
+		 	</h2>
+
+		 	<p>
+		 		HTML é uma linguagem baseada em marcação.
+		 	</p>
+
+		 	<p>
+		 		Com isso usamos TAGS para marcar o conteúdo que queremos apresentar, por exemplo este texto está em uma tag <code>&lt;p&gt;</code> que é descrita para utilização de parágrafos. 
+		 	</p>
+
+		 	<p>
+		 		Para declarar o documento como HTML5 é simples, basta incluir o <code>&lt;!DOCTYPE html&gt;</code> como o exemplo a seguir:
+		 	</p>
+
+		 	<pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="pt-br"&gt; 
+&lt;head&gt;   
+    &lt;meta charset="utf-8"&gt;   
+    &lt;title&gt;Título da página&lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+   &lt;h1&gt;Título&lt;/h1&gt;   
+   &lt;p&gt;Parágrafo.&lt;/p&gt;    
+&lt;/body&gt;  
+&lt;/html&gt;  
+		 	</pre>
+			<h3 id="semantica">
+		 		Semântica
+		 	</h3>
+		 	<blockquote>
+		 		Sistema linguístico, o componente do sentido das palavras e da interpretação das sentenças e dos enunciados.
+		 	</blockquote>
+		 	<p>
+		 		Tem alguns motivos importantes para utilizar as tags corretas para cada situação. A seguir estão alguns:
+		 	</p>
+		 	
+		 	<ul>
+		 		<li>
+		 			Acessibilidade
+		 		</li>
+		 		<li>
+		 			Ferramentas de Indexação (Google, Bing, ...)
+		 		</li>
+		 		<li>
+		 			Browsers minimalistas ou pelo terminal
+		 		</li>
+		 	</ul>
+		 	<p>
+		 		Algumas tags e as suas definições:
+		 	</p>
+		 	<pre>
+&lt;p&gt; -> para descrever um parágrafo
+&lt;b&gt; -> para realçar em negrito uma palavra
+&lt;strong&gt; -> para realçar em negrito uma frase
+&lt;img&gt; -> para importar uma imagem
+&lt;table&gt; -> para definir dados tabulares
+&lt;ul&gt; -> Lista desordenada (com marcadores)
+&lt;ol&gt; -> Lista ordenada, com número ou alfanumérico
+&lt;h1&gt; -> Primeiro título, é importante deixar somente um H1
+		 	</pre>
+		 	<p>
+		 		<strong>
+		 		Com o CSS é possível manipular todo comportamento das TAGs do HTML, como por exemplo: fazer com que um parágrafo vire um título com o tamanho correspondente ao título. Entretanto os programas para acessibilidade não irão entender como um título e sim como um parágrafo e irá informar para o deficiente visual.
+		 		</strong>
+		 	</p>
+		 	<h3 id="html5_trouxe_novo">
+		 		O que o HTML5 trouxe de novo?
+		 	</h3>
+		 	<p>
+		 		Novos elementos semânticos como <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>.
+		 	</p>
+			
+			<blockquote>
+				Alguns sites criavam códigos como: <code>&lt;id="nav"&gt;</code>, <code>&lt;class="header"&gt;</code>, <code>&lt;class="section"&gt;</code>, agora o HTML5 oferece os novos elementos semânticos para padronizar o código sem precisar usar em classes e id. A seguir uma imagem mostrando como utilizar:
+			</blockquote>
+			<img src="img/nova-semantica.gif" alt="imagem exemplificando como é utilizado a nova semantica">
+		 	<p>
+		 		Novos atributos para os elementos de formulários como <b>number</b>, <b>date</b>, <b>time</b>, <b>calendar</b>, <b>range</b>.
+		 	</p>
+
+		 	<p>
+		 		Novos elementos gráficos como <code>&lt;svg&gt;</code>, <code>&lt;canvas&gt;</code>.
+		 	</p>
+
+		 	<p>
+		 		Novos elementos de multimídia como <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>.
+		 	</p>
+
+		 	<h2 id="css">
+		 		CSS
+		 	</h2>
+		 	<p>CSS - Cascading Style Sheets (Folhas de estilo em cascata)</p>
+		 	<p>
+		 		CSS é uma linguagem de estilo para um documento HTML, com o css é possível controlar fontes, cores, bordas, margens, imagens, posicionamento de elementos HTML e outras coisas.
+		 	</p>
+		 	<blockquote>
+		 		O efeito cascata foi feito para estabelecer prioridades para a aplicação de regras de estilo aos elementos HTML
+		 	</blockquote>
+
+		 	
+		 	<h3 id="regras_css">
+		 		Declarando as regras do CSS
+		 	</h3>
+		 	<p>
+		 		Para declarar uma regra no CSS para um elemento no HTML terá que seguir a seguintes regras "Seletor { propriedade: valor; }", confira alguns exemplos a seguir:
+		 	</p>
+		 	<p>
+		 		Com essa declaração <b>todos os parágrafos</b> existentes no HTML irão ter fonte de 14px e cor azul.
+		 	</p>
+		 	<pre>
+&lt;p&gt; texto texto &lt;/p&gt;
+
+p { 
+	color: blue;
+	font-size: 14px;
+}
+		 	</pre>
+		 	<p>
+		 		Com essa declaração <b>todos os elementos existentes no HTML com a classe 'nome-class-1'</b> receberão as regras, independente se é paragrafo, título, tabela, etc.
+		 	</p>
+		 	<pre>
+&lt;p class="nome-class-1"&gt; texto texto &lt;/p&gt;
+
+&lt;b class="nome-class-1"&gt; texto texto &lt;/b&gt;
+
+&lt;h2 class="nome-class-1"&gt; texto texto &lt;/h2&gt;
+
+.nome-class-1{
+	color: red;
+	font-size: 10;
+}
+		 	</pre>
+		 	<p>
+		 		Você poderá declarar por ID, como o <b>ID é único</b> para uma página somente ele receberá as regras.
+		 	</p>
+		 	<pre>
+&lt;div id="identificador1"&gt; conteúdo &lt;/div&gt;		
+
+#identificador1 {
+	color: red;
+}
+		 	</pre>
+
+		 	<p>
+		 		Você pode especializar a regra para atender a um elemento. No caso a seguir somente o texto de exemplo 2 receberá as regras.
+		 	</p>
+		 	<pre>
+&lt;div&gt; 
+	&lt;p&gt;
+		Texto de exemplo &lt;b&gt;especialização&lt;/b&gt;
+	&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="identificador2"&gt; 
+	&lt;p&gt;
+		Texto de exemplo &lt;b&gt;especialização&lt;/b&gt;
+	&lt;/p&gt;
+&lt;/div&gt;	
+
+.identificador2 p b {
+	font-size: 20px;
+}
+		 	</pre>
+		 	<p>
+		 		Regras separadas por espaço implica em buscar elementos descendentes.
+		 		Essa declaração <code>.identificador2 p b {</code> procurará primeiramente o <b>'.identificador2'</b> em seguida procurará o <code>&lt;p&gt;</code> descendente e depois o <code>&lt;b&gt;</code> e como o <code>&lt;b&gt;</code> foi o último na declaração ele que receberá a regra.
+		 	</p>
+
+		 	<p>
+		 		Quando não tem espaço entre as regras significa que é o mesmo elemento.
+		 	</p>
+		 	<pre>
+&lt;span class="identificador2"&gt; 
+	&lt;p&gt;
+		Texto de exemplo &lt;b&gt;especialização&lt;/b&gt;
+	&lt;/p&gt;
+&lt;/span&gt;	
+
+&lt;div class="identificador2"&gt; 
+	&lt;p&gt;
+		Texto de exemplo &lt;b&gt;especialização&lt;/b&gt;
+	&lt;/p&gt;
+&lt;/div&gt;	
+
+div.identificador2 p b {
+	font-size: 20px;
+}
+		 	</pre>
+		 	<p>
+		 		O exemplo acima mostra que somente o <code>&lt;b&gt;</code> dentro da <code>&lt;div&gt;</code> que receberá as regas, como a declaração está assim <code>div.identificador2 p b</code> 'div.identificador2' sem espaço entre eles significa que somente a classe identificador2 que estiver em uma DIV que atenderá as regras.
+		 	</p>
+		 	<h3 id="especificidade">
+		 		Especificidade
+		 	</h3>
+		 	<p>
+		 		A especificidade é a forma que os navegadores definem quais as regras que serão aplicadas para o elmento. A especificidade é baseada apenas nas regras impostas na composição de diferentes tipos de seletores. Como por exemplo:
+		 	</p>
+
+		 	<blockquote>
+		 		O CSS tem sua especificidade para interpretar as regas declaradas, <b>é importante entender que não será a ordem que foi declarada que aplicará a regra, existe essa possibilidade mas somente se você utilizar a mesma declaração por exemplo: p{ color: black } e na linha seguinte p{ color: blue }</b>
+		 	</blockquote>
+
+		 	<p>
+		 		O cálculo é feito contabilizando a quantidade de seletores existentes na declaração, e é feito a separação da seguinte forma:
+		 	</p>
+		 	<ul>
+		 		<li>quantidade de IDs na regra e declarações inline ( acrescenta se existir IDs a quantidade na coluna 'a' ) </li>
+		 		<li>quantidade de class, atributos, pseudo-classes ( acrescenta se existir class, atributos, pseudo-classes na coluna 'b' )</li>
+		 		<li>quantidade de elementos e pseudo-elementos ( acrescenta se existir elementos e pseudo-elementos a quantidade na coluna 'c' )</li>
+		 	</ul>
+
+		 	<p>
+		 		Vejamos como ficará isso na prática:
+		 	</p>
+
+	 		<pre>
+&lt;form class="formulario"&gt;
+&lt;input id="usuario" class="login" type="text"&gt;
+&lt;/form&gt;
+ 
+<b>Agora vamos fazer algumas regras para este elemento:</b>
+
+&lt;style type="text/css"&gt;
+	
+	form input{ <!-- 002 -->
+		font-size: 16px;
+	}
+
+	.formulario #usuario{ <!-- 110 -->
+		font-size: 14px;
+	}
+	
+	form input#usuario{ <!-- 102 -->
+		font-size: 12px;
+	}
+	
+	input.login { <!-- 011 -->
+		font-size: 10px;
+	}
+	
+input#usuario { <!-- 101 -->
+		font-size: 8px;
+	}
+&lt;/style&gt;
+	 		</pre>
+		 	<table class="table">
+		 		<thead>
+		 			<tr>
+		 				<th>Declaração</th>
+		 				<th>ID</th>
+		 				<th>Class</th>
+		 				<th>Elementos</th>
+		 			</tr>
+		 		</thead>
+		 		<tbody>
+		 			<tr>
+		 				<td>form input</td>
+		 				<td class="text-center">0</td>
+		 				<td class="text-center">0</td>
+		 				<td class="text-center">2</td>
+		 			</tr>
+		 			<tr>
+		 				<td>.formulario #usuario</td>
+		 				<td class="text-center">1</td>
+		 				<td class="text-center">1</td>
+		 				<td class="text-center">0</td>
+		 			</tr>
+		 			<tr>
+		 				<td>form input#usuario</td>
+		 				<td class="text-center">1</td>
+		 				<td class="text-center">0</td>
+		 				<td class="text-center">2</td>
+		 			</tr>
+		 			<tr>
+		 				<td>input.login</td>
+		 				<td class="text-center">0</td>
+		 				<td class="text-center">1</td>
+		 				<td class="text-center">1</td>
+		 			</tr>
+		 			<tr>
+		 				<td>input#usuario</td>
+		 				<td class="text-center">1</td>
+		 				<td class="text-center">0</td>
+		 				<td class="text-center">1</td>
+		 			</tr>
+		 		</tbody>
+		 	</table>
+		 	<p>
+		 		A exceção <b>!important</b> foi criada para sobrescrever o estilo do autor. Como por exemplo se estiver usando o bootstrap e não quer alterar o bootstrap.css você escreverá no seu arquivo de estilo as regras e adicionará o <b>!important</b> na frente antes do ponto e vírgula.
+		 	</p>
+			<h3 id="box_model">
+		 		Box model
+		 	</h3>
+		 	<p>Todo elemento HTML é representado por uma caixa chamada <i>box model</i> é um retângulo por volta do elemento contendo os itens: margin, border, padding e o conteúdo</p>
+		 	<img src="img/box-model.png" alt="Imagem que mostra como é o box model" class="img-box-model">
+		 	<p><b>Content:</b> é o conteúdo da box onde ficará texto e/ou imagem. </p>
+		 	<p><b>Padding:</b> é uma área que envolve do conteúdo. O padding é transparente</p>
+		 	<p><b>Border:</b> é a borda que envolve o padding e o conteúdo.</p>
+		 	<p><b>Margin:</b> é uma área que envolve a borda por fora. A margin é transparente</p>
+
+		 	<h3 id="display">
+		 		Display
+		 	</h3>
+		 	<p>
+		 		A propriedade display é a mais importante no CSS para controlar o layout. Você pode controlar se um elemento vai continuar na mesma linha <code>inline</code>, se vai quebrar linha <code>block</code>, se ele vai continuar em linha porém continuar respeitando as margens dele mesmo <code>inline-block</code>, se ele vai deixar de aparecer <code>none</code>, entre outros.
+		 	</p>
+		 	<p>Alguns elementos com <code>display: block;</code></p>
+		 	<pre>
+&lt;div&gt;
+&lt;h1&gt; - &lt;h6&gt;
+&lt;p&gt;
+&lt;form&gt;
+&lt;header&gt;
+&lt;footer&gt;
+&lt;section&gt;
+		 	</pre>
+		 	<p>Alguns elementos com <code>display: inline;</code></p>
+		 	<pre>
+&lt;span&gt;
+&lt;a&gt;
+&lt;img&gt;
+		 	</pre>
+		 	<p>
+		 	Você também pode transformar qualquer elemento para o comportamento de tabela. <code> &lt;table&gt;</code> é <code>display: table;</code> por padrão, <code> &lt;tr&gt;</code> é <code>display: table-row;</code> por padrão,<code> &lt;td&gt;</code> é <code>display: table-cell;</code> por padrão.
+		 	</p>
+		 	<h3 id="position">
+		 		Position
+		 	</h3>
+			<p>
+				A propriedade position especifica o posicionamento de um elemento: 
+
+			</p>
+			<p>
+				<code>position: static;</code>
+				<br>
+				Todos elementos HTML são <code>static</code> por padrão, essa propriedade não afeta a posição dos elementos, ela segue o fluxo normal da página. As propriedades <code>top,bottom, left e right</code> não irão alterar a posição do elemento.
+			</p>
+			<p>
+				<code>position: relative;</code> 
+				<br>
+				Um elemento com <code>relative</code> está posicionado relativamente de acordo com a sua posição. Você pode inserir valores nas propriedades <code>top, bottom, left e right</code>
+			</p>
+			<p>
+				<code>position: fixed;</code>
+				<br>
+				Um elemento com <code>fixed</code> ficará fixo com relação a janela, sempre visível mesmo se utilizar a barra de rolagem.
+			</p>
+			<p>
+				<code>position: absolute;</code>
+				<br>
+				O elemento é posicionado relativo ao primeiro elemento antecessor não <code>static</code>
+			</p>
+			<div class="exemplo">
+				<form style=" position: relative; display: inline;">
+					<input type="text" style=" font-size: 18px; padding-right: 24px;">
+					<img src="img/calendario.png" alt="calendário" style="position: absolute; right: 5px; top: 0px; width: 20px; cursor: pointer">
+				</form>
+			</div>
+		 	<h3 id="overflow">
+		 		Overflow
+		 	</h3>
+		 	<p>
+		 		A propriedade <code>overflow</code> define o que acontecerá quando o conteúdo transborda das margens de um elemento.
+		 	</p>
+		 	<p>
+		 		<code>visible</code>
+		 		<br>
+		 		O conteúdo não será cortado se exceder o tamanho definido do elemento.
+		 	</p>
+		 	<div class="exemplo">
+		 		<div style="border: 1px solid black; width: 100px; height: 100px; overflow: visible;">
+		 			Texto texto texto texto texto texto texto texto texto texto texto texto texto
+		 		</div>
+		 	</div>
+		 	<p>
+		 		<code>hidden</code>
+		 		<br>
+		 		O conteúdo será cortado se exceder o tamanho definido do elemento.
+		 	</p>
+		 	<div class="exemplo">
+		 		<div style="border: 1px solid black; width: 100px; height: 100px; overflow: hidden;">
+		 			Texto texto texto texto texto texto texto texto texto texto texto texto texto
+		 		</div>
+		 	</div>
+		 	<p>
+		 		<code>scroll</code>
+		 		<br>
+		 		O conteúdo será cortado mas aparecerá uma barra de rolagem para visualizar o restante do conteúdo.
+		 	</p>
+		 	<div class="exemplo">
+		 		<div style="border: 1px solid black; width: 100px; height: 100px; overflow: scroll;">
+		 			Texto texto texto texto texto texto texto texto texto texto texto texto texto
+		 		</div>
+		 	</div>
+		 	<p>
+		 		<code>auto</code>
+		 		<br>
+		 		Irá aparecer a barra de rolagem somente se o conteúdo exceder o elemento.
+		 	</p>
+		 	<div class="exemplo">
+		 		<div style="border: 1px solid black; width: 100px; height: 100px; overflow: auto;">
+		 			Texto texto texto texto texto texto texto texto texto texto texto texto texto
+		 		</div>
+		 	</div>
+		 	<h3 id="media_queries">
+		 		Media Queries
+		 	</h3>
+			<p>Media query é uma forma de declarar um bloco de código em CSS se uma determinada regra foi atendida.</p>
+			<pre>
+@media not|only mediatype and (expressions) {
+    CSS-Code;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+@media all and (orientation:portrait) { … }
+
+@media all and (orientation:landscape) { … }
+
+&lt;link rel="stylesheet" media="screen and (max-width: 500px)" href="example.css" />
+			</pre>
+		</section>
+		<div class="clearfix"></div>
+ 	</div>
+
+</body>
+</html>
