@@ -1,0 +1,213 @@
+:focus {
+	outline: 0;
+}
+
+@page {
+    size: A4;
+    margin: 0px;
+}
+@media print{
+	nav{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	body nav{
+		position: static;
+	}
+	body .container{
+		width: 100%;
+	}
+	body section.conteudo-principal{
+		margin-top: 20px;
+	}
+	body .botao-menu{
+		display: block;
+		left: 15px;
+	}
+	body .botao-voltar-topo{
+		display: none;
+	}
+	body .img-box-model{
+		width: 258px
+	}
+	body h1{
+		font-size: 30px;
+	}
+}
+@media screen and (min-width: 701px) and (max-width: 1160px) {
+	body nav{
+		position: static;
+	}
+	body section.conteudo-principal{
+		margin-top: 20px;
+	}
+	body .botao-menu{
+		display: block;
+		left: 15px;
+	}
+	body .botao-voltar-topo{
+		display: none;
+	}
+}
+
+body{
+	font-family: Verdana,Geneva,sans-serif;
+	background: #f0f0f0;
+}
+
+p, b, blockquote, li{
+	font-size: 14px;
+}
+
+h1{
+	font-size: 36px;
+}
+h2, h3{
+	margin-top: 40px;
+}
+h3, b{
+	color: #f25d00;
+}
+pre {
+	width: 100%;                         
+	white-space: pre-wrap;                 /* CSS3 browsers  */
+	white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
+	white-space: -pre-wrap;                /* Opera 4 thru 6 */
+	white-space: -o-pre-wrap;              /* Opera 7 and up */
+	word-wrap: break-word;                 /* IE 5.5+ and up */
+	
+	background-color: #4b4b4b;
+	color: white;
+	overflow: hidden;
+	padding-top: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	box-sizing: border-box;
+}	
+
+blockquote{
+	padding: 10px 20px;
+	margin: 0 0 20px;
+	border-left: 5px solid #eee;
+}
+
+p{
+	line-height: 1.5em;
+}
+
+code{
+	padding: 2px 5px;
+	font-size: 90%;
+	color: #f25d00;
+	background-color: #ececff;
+	border-radius: 4px;
+	font-weight: bold;
+
+}
+nav{
+	background-color: white;
+	position: fixed;
+	box-sizing: border-box;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+}
+nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+nav a{
+	text-decoration: none;
+	padding: 10px;
+	display: inherit;
+	font-size: 12px;
+}
+nav a:hover, nav a:active, nav a:focus, nav a:link, nav a:visited{
+	color: black;
+}
+nav a:hover{
+	background-color: #f25d00;
+	color: white;
+
+}
+img{
+	margin: 0 auto;
+	display: block;
+
+}
+
+section.conteudo-principal{
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+	background-color: white;
+	padding: 10px 20px;
+	border: 1px solid #dfdfdf;
+}
+
+.table{
+	width: 100%;
+	max-width: 100%;
+	background-color: transparent
+	border-spacing: 0;
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+}
+
+.table th {
+	background-color: #f6f6f6;
+}
+
+.table th, .table td{
+	border: 1px solid #ddd;
+}
+.exemplo::before{
+	content: "Exemplo:";
+	position: absolute;
+	top: -12px;
+	left: 8px;
+	background: white;
+	font-size: 12px;
+	padding: 4px 15px;
+	border: 1px solid rgb(193, 193, 193);
+}
+.exemplo{
+	position: relative;
+	padding: 40px 20px;
+	background-color: rgb(242, 242, 242);
+	border: 1px solid rgb(193, 193, 193);
+}
+
+.clearfix{
+	clear: both;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.container{
+	margin: 0 auto;
+	width: 700px;	
+}
+
+.botao-flutuante{
+	padding: 7px 10px;
+	background-color: black;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	position: fixed;
+	bottom: 15px;
+	text-decoration: none;
+	display: none;
+}
+
+.botao-voltar-topo{
+	display: block;
+	right: 15px;
+}
