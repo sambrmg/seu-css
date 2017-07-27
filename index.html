@@ -22,11 +22,11 @@
 				<li><a href="#html5_trouxe_novo" >O que o HTML5 trouxe de novo?</a></li>
 				<li><a href="#css" >CSS</a></li>
 				<li><a href="#regras_css" >Declarando as regras do CSS</a></li>
+				<li><a href="#inspecionar" >Inspecionar elementos</a></li>
 				<li><a href="#especificidade" >Especificidade</a></li>
 				<li><a href="#box_model" >Box model</a></li>
 				<li><a href="#display" >Display</a></li>
 				<li><a href="#position" >Position</a></li>
-				<li><a href="#clearfix" >Clear</a></li>
 				<li><a href="#overflow" >Overflow</a></li>
 				<li><a href="#media_queries" >Media Queries</a></li>
 			</ul>
@@ -204,7 +204,7 @@ p {
 }
 		 	</pre>
 		 	<p>
-		 		Regras separadas por espaço implica em buscar elementos descendentes.
+		 		Regras separadas por espaço implicam em buscar elementos descendentes.
 		 		Essa declaração <code>.identificador2 p b {</code> procurará primeiramente o <b>'.identificador2'</b> em seguida procurará o <code>&lt;p&gt;</code> descendente e depois o <code>&lt;b&gt;</code> e como o <code>&lt;b&gt;</code> foi o último na declaração ele que receberá a regra.
 		 	</p>
 
@@ -230,8 +230,15 @@ div.identificador2 p b {
 		 	</pre>
 		 	<p>
 		 		O exemplo acima mostra que somente o <code>&lt;b&gt;</code> dentro da <code>&lt;div&gt;</code> que receberá as regas, como a declaração está assim <code>div.identificador2 p b</code> 'div.identificador2' sem espaço entre eles significa que somente a classe identificador2 que estiver em uma DIV que atenderá as regras.
-		 	</p>
-		 	<h3 id="especificidade">
+			</p>
+			<hr>
+			<a href="exercicio_1.html">Exercício 1</a>
+			<hr> 
+			<h3 id="inspecionar">
+		 		Inspecionar elementos
+			 </h3>
+			<img class="inspector" alt="Imagem da ferramenta de inspeção de elementos do browser" src="img/inspector.png">
+			<h3 id="especificidade">
 		 		Especificidade
 		 	</h3>
 		 	<p>
@@ -329,7 +336,10 @@ input#usuario { <!-- 101 -->
 		 	</table>
 		 	<p>
 		 		A exceção <b>!important</b> foi criada para sobrescrever o estilo do autor. Como por exemplo se estiver usando o bootstrap e não quer alterar o bootstrap.css você escreverá no seu arquivo de estilo as regras e adicionará o <b>!important</b> na frente antes do ponto e vírgula.
-		 	</p>
+			 </p>
+			<hr>
+			<a href="exercicio_2.html">Exercício 2</a>
+			<hr>
 			<h3 id="box_model">
 		 		Box model
 		 	</h3>
