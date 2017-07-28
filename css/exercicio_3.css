@@ -1,0 +1,13 @@
+ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+ul li { 
+    display: inline; 
+    background-color: #5da1c6; 
+    color: white; 
+    padding: 10px 10px; 
+    cursor: pointer; 
+}
+
