@@ -212,6 +212,11 @@ section.conteudo-principal{
 	display: block;
 	right: 15px;
 }
+
 .inspector{
 	width: 100%;
+}
+
+.referencias ul{
+    padding-left: 17px;
 }
