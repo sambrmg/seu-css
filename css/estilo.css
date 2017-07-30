@@ -152,7 +152,7 @@ section.conteudo-principal{
 .table{
 	width: 100%;
 	max-width: 100%;
-	background-color: transparent
+	background-color: transparent;
 	border-spacing: 0;
 	border-collapse: collapse;
 	border: 1px solid #ddd;
@@ -218,5 +218,6 @@ section.conteudo-principal{
 }
 
 .referencias ul{
-    padding-left: 17px;
+	padding-left: 0px;
+	list-style: none;
 }
