@@ -3,10 +3,8 @@
 
 Esta pagina foi criada para propagar o conhecimento de HTML e CSS
 
-* HTML
-* Semântica
+* Semântica HTML
 * O que o HTML5 trouxe de novo?
-* CSS
 * Declarando as regras do CSS
 * Inspecionar elementos
 * Especificidade
