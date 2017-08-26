@@ -1,6 +1,8 @@
 # seu-css
 [https://sambrmg.github.io/seu-css/](https://sambrmg.github.io/seu-css/)
 
+[http://www.seu-css.com](http://www.seu-css.com)
+
 Esta pagina foi criada para propagar o conhecimento de HTML e CSS
 
 * Semântica HTML
