@@ -1,0 +1,90 @@
+* {
+    font-family: sans-serif;
+}
+
+.cabecalho{
+    background-image: url('../img/hero-unit.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.cabecalho .logo-menu{
+    padding: 26px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.cabecalho .logo{
+    float: left;
+    
+}
+.cabecalho .logo a{
+    display: inline-block;
+}
+.cabecalho .msg{
+    text-align: center;
+    color: white;
+    padding: 60px 0 0 0;
+}
+.cabecalho .msg h1{
+    margin: 0;
+}
+.cabecalho .msg p{
+    margin: 27px 0 0 0; 
+}
+
+.cabecalho .botoes{
+    text-align: center;
+    margin-top: 36px;
+}
+.btn-vermelho {
+    background-color: #FB2F3A;
+    border: 0px;
+    border-radius: 4px;
+    padding: 15px 20px;
+    font-weight: bold;
+    -webkit-box-shadow: 2px 3px 2px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 3px 2px 0px rgba(0,0,0,0.4);
+    box-shadow: 2px 3px 2px 0px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.btn-transparente{
+    background-color: transparent;
+    border: 0;
+    border-bottom-width: 0px;
+    border-bottom-style: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 21px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cabecalho .img-browser{
+    margin: 27px auto 0;
+    display: block;
+}
+.cabecalho .img-browser img{
+    width: 100%;
+    position: relative;
+    bottom: -4px;
+}
+.main-menu{
+    float: right;
+}
+.main-menu ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.main-menu ul li{
+    display: inline-block;
+}
+.main-menu ul li a{
+    text-decoration: none;
+    padding: 12px 21px;
+    border-radius: 4px;
+    color: white;
+}
+.main-menu ul li a:hover, .main-menu ul li a.selecionado{
+    background-color: black;
+}
+
