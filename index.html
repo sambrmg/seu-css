@@ -103,7 +103,7 @@
 		 	</pre>
 		 	<p>
 		 		<strong>
-		 		Com o CSS é possível manipular todo comportamento das TAGs do HTML, como por exemplo: fazer com que um parágrafo vire um título com o tamanho correspondente ao título. Entretanto os programas para acessibilidade não irão entender como um título e sim como um parágrafo e irá informar para o deficiente visual.
+		 		Com o CSS é possível manipular todo comportamento das TAGs do HTML, como por exemplo: fazer com que um parágrafo vire um título com o tamanho correspondente ao título. Entretanto os programas para acessibilidade não irão entender como um título e sim como um parágrafo.
 		 		</strong>
 		 	</p>
 		 	<h3 id="html5_trouxe_novo">
@@ -114,7 +114,7 @@
 		 	</p>
 			
 			<blockquote>
-				Alguns sites criavam códigos como: <code>&lt;div id="nav"&gt;</code>, <code>&lt;div class="header"&gt;</code>, <code>&lt;div class="section"&gt;</code>, agora o HTML5 oferece os novos elementos semânticos para padronizar o código sem precisar usar em classes e id. A seguir uma imagem mostrando como utilizar:
+				Alguns sites criavam códigos como: <code>&lt;div class="nav"&gt;</code>, <code>&lt;div class="header"&gt;</code>, <code>&lt;div class="section"&gt;</code>, agora o HTML5 oferece os novos elementos semânticos para padronizar o código sem precisar usar em classes. A seguir uma imagem mostrando como utilizar:
 			</blockquote>
 			<img src="img/nova-semantica.gif" alt="imagem exemplificando como é utilizado a nova semantica">
 		 	<p>
@@ -145,7 +145,7 @@
 		 		Declarando as regras do CSS
 		 	</h3>
 		 	<p>
-		 		Para declarar uma regra no CSS para um elemento no HTML terá que seguir a seguintes regras "Seletor { propriedade: valor; }", confira alguns exemplos a seguir:
+		 		Para declarar uma regra no CSS para um elemento no HTML precisará seguir a seguinte estrutura "Seletor { propriedade: valor; }", confira alguns exemplos a seguir:
 		 	</p>
 		 	<p>
 		 		Com essa declaração <b>todos os parágrafos</b> existentes no HTML irão ter fonte de 14px e cor azul.
@@ -174,7 +174,7 @@ p {
 }
 		 	</pre>
 		 	<p>
-		 		Você poderá declarar por ID, como o <b>ID é único</b> para uma página somente ele receberá as regras.
+		 		Você poderá declarar por ID.
 		 	</p>
 		 	<pre>
 &lt;div id="identificador1"&gt; conteúdo &lt;/div&gt;		
@@ -185,7 +185,7 @@ p {
 		 	</pre>
 
 		 	<p>
-		 		Você pode especializar a regra para atender a um elemento. No caso a seguir somente o texto de exemplo 2 receberá as regras.
+		 		Você pode especializar a regra para atender a um elemento. No caso a seguir somente o conteúdo dentro da tag b do exemplo 2 receberá as regras.
 		 	</p>
 		 	<pre>
 &lt;div&gt; 
